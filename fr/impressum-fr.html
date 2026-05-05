@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Impressum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="logo">
+    <a href="index.html">
+      <a class="logo" href="index-en.html" aria-label="Back to home"></a>
+      <img src="..//assets/images/Spring_Copenhagen-logo.png" alt="Logo">
+    </a>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#kollektion">Kollektion</a>
+    <a href="index.html#marott">Christel Marott</a>
+    <a href="index.html#produkt">Produkt</a>
+    <a href="index.html#kontakt">Kontakt</a>
+  </nav>
+
+   <div class="lang" aria-label="Sélection de langue">
+  <a href="../index.html">DEU</a>
+  <a href="../en/index-en.html">ENG</a>
+  <a href="index-fr.html" class="active" aria-current="page">FRA</a>
+</div>
+
+  <div class="burger" id="burger">☰</div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html#home">Home</a>
+  <a href="index.html#kollektion">Kollektion</a>
+  <a href="index.html#marott">Christel Marott</a>
+  <a href="index.html#produkt">Produkt</a>
+  <a href="index.html#kontakt">Kontakt</a>
+</nav>
+
+<div class="container legal">
+
+  <h1>Mentions légales</h1>
+
+  <p><strong>Remarque :</strong> La version allemande des mentions légales fait foi juridiquement.</p>
+
+  <h2>Informations conformément au § 5 TMG</h2>
+
+  <p>
+    Kaiser Porzellan GmbH<br>
+    Auwaldstr. 8<br>
+    96231 Bad Staffelstein<br>
+    Allemagne
+  </p>
+
+  <p>
+    Représentée par :<br>
+    Hans-Peter Langsch
+  </p>
+
+  <p>
+    Goebel Porzellan GmbH<br>
+    Auwaldstr. 8<br>
+    96231 Bad Staffelstein<br>
+    Allemagne
+  </p>
+
+  <p>
+    Représentée par :<br>
+    Uwe Dzyck et Daniela Vetter
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Téléphone : +49 (0) 95 63 / 92 0<br>
+    Fax : +49 (0) 95 63 / 92 594<br>
+    E-mail : goebel@goebel.de
+  </p>
+
+  <h2>Registre du commerce</h2>
+  <p>
+    Inscription au registre du commerce<br>
+    Tribunal d’enregistrement : Amtsgericht Coburg<br>
+    Numéro de registre : HRB 4291
+  </p>
+
+  <h2>TVA</h2>
+  <p>
+    Numéro d’identification à la TVA conformément au § 27 a de la loi allemande sur la TVA :<br>
+    DE814825971
+  </p>
+
+  <h2>Appareils électriques</h2>
+  <p>N° WEEE : DE71817340</p>
+  <p>N° EPR : FR207506_01QPFG</p>
+
+  <h2>Règlement des litiges</h2>
+  <p>
+    Nous ne sommes ni disposés ni obligés de participer à une procédure de règlement des litiges devant un organisme de médiation des consommateurs.
+  </p>
+
+  <h2>Responsabilité du contenu</h2>
+  <p>
+    En tant que prestataire de services, nous sommes responsables de nos propres contenus sur ces pages conformément au § 7 al.1 TMG et aux lois générales applicables.
+    Selon les §§ 8 à 10 TMG, nous ne sommes toutefois pas tenus de surveiller les informations externes transmises ou stockées.
+  </p>
+
+  <p>
+    Les obligations de suppression ou de blocage des informations restent inchangées. Une responsabilité n’est toutefois possible qu’à partir du moment où une violation concrète de la loi est connue.
+    Dès notification, les contenus concernés seront supprimés immédiatement.
+  </p>
+
+  <h2>Responsabilité des liens</h2>
+  <p>
+    Notre offre contient des liens vers des sites web externes de tiers. Nous n’avons aucune influence sur leur contenu et n’assumons donc aucune responsabilité à cet égard.
+  </p>
+
+  <p>
+    Les pages liées ont été vérifiées au moment de la mise en lien. Un contrôle permanent sans indication concrète n’est toutefois pas raisonnable.
+  </p>
+
+  <p>
+    Dès notification de violations, les liens concernés seront supprimés immédiatement.
+  </p>
+
+  <h2>Droit d’auteur</h2>
+  <p>
+    Les contenus créés par les exploitants du site sont soumis au droit d’auteur allemand.
+    Toute reproduction, modification ou utilisation nécessite l’autorisation de l’auteur concerné.
+  </p>
+
+  <p>
+    Les téléchargements et copies de ce site sont autorisés uniquement pour un usage privé et non commercial.
+  </p>
+
+  <p>
+    Les contenus de tiers sont identifiés comme tels. En cas de violation du droit, ces contenus seront supprimés dès notification.
+  </p>
+
+  <a class="back" href="index.html">← Retour à la page d’accueil</a>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>© 2026 Goebel Porzellan GmbH</p>
+
+     <div class="footer-links">
+          <a href="impressum-fr.html">mentions légales</a>
+          <a href="datenschutz-fr.html">protection des donnée</a>
+        </div>
+  </div>
+</footer>
+
+<script>
+  const burger = document.getElementById("burger");
+  const mobileNav = document.getElementById("mobileNav");
+
+  if (burger && mobileNav) {
+    burger.addEventListener("click", () => {
+      mobileNav.classList.toggle("open");
+    });
+  }
+</script>
+
+</body>
+</html>
