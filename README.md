@@ -1,1 +1,1 @@
-Landinpage for a porcelain series by Spring Copenhangen distributed by Goebel Porcelain Company.
+Landinpage for a porcelain series by Spring Copenhangen distributed by Goebel Porcelain Company from Germany.
