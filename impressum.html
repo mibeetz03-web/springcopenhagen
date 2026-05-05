@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Impressum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="assets/images/Spring_Copenhagen-logo.png" alt="Logo">
+    </a>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#kollektion">Kollektion</a>
+    <a href="index.html#marott">Christel Marott</a>
+    <a href="index.html#produkt">Produkt</a>
+    <a href="index.html#kontakt">Kontakt</a>
+  </nav>
+
+  <div class="lang">
+    <a href="#" class="active">DEU</a>
+    <a href="#">ENG</a>
+    <a href="#">FRA</a>
+  </div>
+
+  <div class="burger" id="burger">☰</div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html#home">Home</a>
+  <a href="index.html#kollektion">Kollektion</a>
+  <a href="index.html#marott">Christel Marott</a>
+  <a href="index.html#produkt">Produkt</a>
+  <a href="index.html#kontakt">Kontakt</a>
+</nav>
+
+<div class="container legal">
+
+  <h1>Impressum</h1>
+
+  <h2>Angaben gemäß § 5 TMG</h2>
+
+  <p>
+    Kaiser Porzellan GmbH<br>
+    Auwaldstr. 8<br>
+    96231 Bad Staffelstein
+  </p>
+
+  <p>
+    Vertreten durch:<br>
+    Hans-Peter Langsch
+  </p>
+
+  <p>
+    Goebel Porzellan GmbH<br>
+    Auwaldstr. 8<br>
+    96231 Bad Staffelstein
+  </p>
+
+  <p>
+    Vertreten durch:<br>
+    Uwe Dzyck und Daniela Vetter
+  </p>
+
+  <h2>Kontakt</h2>
+  <p>
+    Telefon: +49 (0) 95 63 / 92 0<br>
+    Telefax: +49 (0) 95 63 / 92 594<br>
+    E-Mail: goebel@goebel.de
+  </p>
+
+  <h2>Registereintrag</h2>
+  <p>
+    Eintragung im Handelsregister<br>
+    Registergericht: Amtsgericht Coburg<br>
+    Registernummer: HRB 4291
+  </p>
+
+  <h2>Umsatzsteuer</h2>
+  <p>
+    Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
+    DE814825971
+  </p>
+
+  <h2>Elektrogeräte</h2>
+  <p>WEEE Reg.-Nr.: DE71817340</p>
+  <p>EPR Reg.-Nr.: FR207506_01QPFG</p>
+
+  <h2>Streitschlichtung</h2>
+  <p>
+    Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+  </p>
+
+  <h2>Haftung für Inhalte</h2>
+  <p>
+    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+    Nach §§ 8 bis 10 TMG sind wir jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.
+  </p>
+
+  <p>
+    Verpflichtungen zur Entfernung oder Sperrung bleiben unberührt. Eine Haftung ist jedoch erst ab Kenntnis einer konkreten Rechtsverletzung möglich.
+    Bei Bekanntwerden werden entsprechende Inhalte umgehend entfernt.
+  </p>
+
+  <h2>Haftung für Links</h2>
+  <p>
+    Unser Angebot enthält Links zu externen Websites Dritter. Auf deren Inhalte haben wir keinen Einfluss und übernehmen daher keine Gewähr.
+  </p>
+
+  <p>
+    Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung überprüft. Eine permanente Kontrolle ist jedoch ohne konkrete Hinweise nicht zumutbar.
+  </p>
+
+  <p>
+    Bei Bekanntwerden von Rechtsverletzungen werden entsprechende Links umgehend entfernt.
+  </p>
+
+  <h2>Urheberrecht</h2>
+  <p>
+    Die durch die Seitenbetreiber erstellten Inhalte unterliegen dem deutschen Urheberrecht.
+    Vervielfältigung, Bearbeitung und Verwertung bedürfen der Zustimmung des jeweiligen Autors.
+  </p>
+
+  <p>
+    Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+  </p>
+
+  <p>
+    Inhalte Dritter werden als solche gekennzeichnet. Bei Bekanntwerden von Rechtsverletzungen werden diese Inhalte entfernt.
+  </p>
+
+  <a class="back" href="index.html">← Zurück zur Startseite</a>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>© 2026 Goebel Porzellan GmbH</p>
+
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const burger = document.getElementById("burger");
+  const mobileNav = document.getElementById("mobileNav");
+
+  if (burger && mobileNav) {
+    burger.addEventListener("click", () => {
+      mobileNav.classList.toggle("open");
+    });
+  }
+</script>
+
+</body>
+</html>
