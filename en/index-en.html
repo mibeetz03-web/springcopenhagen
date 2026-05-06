@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christel Zodiacs by Spring Copenhagen</title>
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <div class="page">
+    <header class="topbar">
+      <a class="logo" href="index-en.html" aria-label="Back to home">
+  <img src="../assets/images/Spring_Copenhagen-logo.png" alt="Spring Copenhagen Logo" />
+</a>
+
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="#home">Home</a>
+        <a href="#kollektion">Collection</a>
+        <a href="#produkt">Product</a>
+        <a href="#marott">Christel Marott</a>
+        <a href="#kontakt">Contact</a>
+      </nav>
+
+      <div class="lang" aria-label="Language selection">
+  <a href="../index.html">DE</a>
+  <a href="index-en.html" class="active" aria-current="page">EN</a>
+  <a href="../fr/index-fr.html">FR</a>
+</div>
+
+      <button class="burger" id="burger" type="button" aria-label="Menü öffnen" aria-controls="mobileNav" aria-expanded="false">
+        ☰
+      </button>
+    </header>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+      <a href="#home">Home</a>
+      <a href="#kollektion">Collection</a>
+      <a href="#produkt">Product</a>
+      <a href="#marott">Christel Marott</a>
+      <a href="#kontakt">Contact</a>
+
+div class="lang" aria-label="Sprachauswahl">
+      <a href="index.html" class="active" aria-current="page">DE</a>
+      <a href="en/index-en.html">EN</a>
+      <a href="fr/index-fr.html">FR</a>
+    </div>
+
+    </nav>
+
+    <main>
+      <section id="home" class="hero hero-slider" aria-label="Hero Slider">
+        <div class="hero-slide is-active">
+          <img src="../assets/images/hero/Hero_1.jpg" alt="Christel Zodiacs Kollektion" />
+        </div>
+
+        <div class="hero-slide">
+          <img src="../assets/images/hero/Hero_2.jpg" alt="Christel Zodiacs Figur" loading="lazy" />
+        </div>
+
+        <div class="hero-slide">
+          <img src="../assets/images/hero/Hero_3.jpg" alt="Christel Zodiacs Präsentation" loading="lazy" />
+        </div>
+
+        <div class="hero-overlay">
+          <h1>magic</h1>
+          <p>Christel Zodiacs by Spring Copenhagen</p>
+          <a href="#kollektion" class="btn hero-btn">View collection</a>
+        </div>
+
+        <button class="hero-arrow hero-arrow--prev" type="button" aria-label="Vorheriges Hero-Bild">‹</button>
+        <button class="hero-arrow hero-arrow--next" type="button" aria-label="Nächstes Hero-Bild">›</button>
+      </section>
+
+      <section class="text-section">
+        <h2>A tribute to the<br>magic of the stars</h2>
+        <p><strong>Christel Zodiacs</strong> by <strong>Spring Copenhagen</strong> is a fascinating collection that brings together <strong>art</strong> and <strong>astrology</strong> in a special way.</p>
+
+        <p>With this series, <strong>Goebel</strong> expands its range with a collection that combines <strong>symbolism</strong>, <strong>artistic expression</strong> and <strong>Scandinavian design</strong> in perfect harmony.</p>
+
+      </section>
+
+      <section class="image-block" aria-label="Zodiacs Sideboard">
+        <img src="../assets/images/Zodiacs_Sideboard.jpg" alt="Christel Zodiacs Figuren auf einem Sideboard" />
+      </section>
+
+      <section class="collection-section" id="kollektion">
+        <h2>Collection</h2>
+
+        <div class="filters" aria-label="Kollektion filtern">
+          <select id="signFilter" aria-label="Nach Sternzeichen filtern">
+            <option value="all">Zodiac sign: All</option>
+            <option value="Widder">Aries</option>
+            <option value="Stier">Taurus</option>
+            <option value="Zwillinge">Gemini</option>
+            <option value="Krebs">Cancer</option>
+            <option value="Löwe">Leo</option>
+            <option value="Jungfrau">Virgo</option>
+            <option value="Waage">Libra</option>
+            <option value="Skorpion">Scorpio</option>
+            <option value="Schütze">Sagittarius</option>
+            <option value="Steinbock">Capricorn</option>
+            <option value="Wassermann">Aquarius</option>
+            <option value="Fische">Pisces</option>
+          </select>
+
+          <select id="elementFilter" aria-label="Nach Element filtern">
+            <option value="all">Element: All</option>
+            <option value="Feuer">Fire</option>
+            <option value="Erde">Earth</option>
+            <option value="Wasser">Water</option>
+            <option value="Luft">Air</option>
+          </select>
+
+          <select id="polarityFilter" aria-label="Nach Polarität filtern">
+            <option value="all">Polarity: All</option>
+            <option value="männlich">Masculine</option>
+            <option value="weiblich">Feminine</option>
+          </select>
+
+          <button type="button" id="resetFilters">Reset filters</button>
+        </div>
+
+<div class="collection-grid" id="collectionGrid">
+
+  <!-- Widder -->
+  <article class="collection-card" data-sign="Widder" data-element="Feuer" data-polarity="männlich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Widder_maennlich Kopie.png" alt="Widder männlich" />
+      </button>
+    </div>
+    <span class="element-label element-feuer">Fire</span>
+    <h3>Aries Masculine</h3>
+    <p>21st March to 20th April</p>
+    <p class="product-size">L × W × H: 16 × 8 × 25,5 cm</p>
+  </article>
+
+  <article class="collection-card" data-sign="Widder" data-element="Feuer" data-polarity="weiblich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Widder_weiblich Kopie.png" alt="Widder weiblich" />
+      </button>
+    </div>
+    <span class="element-label element-feuer">Fire</span>
+    <h3>Aries Feminine</h3>
+    <p>21st March to 20th April</p>
+    <p class="product-size">L × W × H: 18 × 9 × 25 cm</p>
+  </article>
+
+  <!-- Stier -->
+  <article class="collection-card" data-sign="Stier" data-element="Erde" data-polarity="männlich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Stier_maennlich Kopie.png" alt="Stier männlich" />
+      </button>
+    </div>
+    <span class="element-label element-erde">Earth</span>
+    <h3>Taurus Masculine</h3>
+    <p>21st April to 20th May</p>
+    <p class="product-size">L × W × H: 17 × 9 × 26 cm</p>
+  </article>
+
+  <article class="collection-card" data-sign="Stier" data-element="Erde" data-polarity="weiblich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Stier_weiblich Kopie.png" alt="Stier weiblich" />
+      </button>
+    </div>
+    <span class="element-label element-erde">Earth</span>
+    <h3>Taurus Feminine</h3>
+    <p>21st April to 20th May</p>
+    <p class="product-size">L × W × H: 19 × 10 × 25 cm</p>
+  </article>
+
+  <!-- Zwillinge -->
+  <article class="collection-card" data-sign="Zwillinge" data-element="Luft" data-polarity="männlich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Zwillinge_maennlich Kopie.png" alt="Zwillinge männlich" />
+      </button>
+    </div>
+    <span class="element-label element-luft">Air</span>
+    <h3>Gemini Masculine</h3>
+    <p>21st May to 21st June</p>
+    <p class="product-size">L × W × H: 15 × 8 × 24 cm</p>
+  </article>
+
+  <article class="collection-card" data-sign="Zwillinge" data-element="Luft" data-polarity="weiblich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Zwillinge_weiblich Kopie.png" alt="Zwillinge weiblich" />
+      </button>
+    </div>
+    <span class="element-label element-luft">Air</span>
+    <h3>Gemini Feminine</h3>
+    <p>21st May to 21st June</p>
+    <p class="product-size">L × W × H: 16 × 9 × 24 cm</p>
+  </article>
+
+  <!-- Krebs -->
+  <article class="collection-card" data-sign="Krebs" data-element="Wasser" data-polarity="männlich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Krebs_maennlich%20Kopie.png" alt="Krebs männlich" />
+      </button>
+
+    </div>
+    <span class="element-label element-wasser">Water</span>
+    <h3>Cancer Masculine</h3>
+    <p>22nd June to 22nd July</p>
+    <p class="product-size">L × W × H: 14 × 9 × 23 cm</p>
+  </article>
+
+  <article class="collection-card" data-sign="Krebs" data-element="Wasser" data-polarity="weiblich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Krebs_weiblich Kopie.png" alt="Krebs weiblich" />
+      </button>
+    </div>
+    <span class="element-label element-wasser">Water</span>
+    <h3>Cancer Feminine</h3>
+    <p>22nd June to 22nd July</p>
+    <p class="product-size">L × W × H: 15 × 10 × 23 cm</p>
+  </article>
+
+  <!-- Löwe -->
+  <article class="collection-card" data-sign="Löwe" data-element="Feuer" data-polarity="männlich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Loewe_maennlich Kopie.png" alt="Löwe männlich" />
+      </button>
+    </div>
+    <span class="element-label element-feuer">Fire</span>
+    <h3>Leo Masculine</h3>
+    <p>23rd July to 23rd August</p>
+    <p class="product-size">L × W × H: 18 × 10 × 27 cm</p>
+  </article>
+
+  <article class="collection-card" data-sign="Löwe" data-element="Feuer" data-polarity="weiblich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Loewe_weiblich Kopie.png" alt="Löwe weiblich" />
+      </button>
+    </div>
+    <span class="element-label element-feuer">Fire</span>
+    <h3>Leo Feminine</h3>
+    <p>23rd July to 23rd August</p>
+    <p class="product-size">L × W × H: 19 × 11 × 26 cm</p>
+  </article>
+
+  <!-- Jungfrau -->
+  <article class="collection-card" data-sign="Jungfrau" data-element="Erde" data-polarity="männlich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Jungfrau_maennlich Kopie.png" alt="Jungfrau männlich" />
+      </button>
+    </div>
+    <span class="element-label element-erde">Earth</span>
+    <h3>Virgo Masculine</h3>
+    <p>24th August to 23rd September</p>
+    <p class="product-size">L × W × H: 15 × 8 × 24 cm</p>
+  </article>
+
+  <article class="collection-card" data-sign="Jungfrau" data-element="Erde" data-polarity="weiblich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Jungfrau_weiblich Kopie.png" alt="Jungfrau weiblich" />
+      </button>
+    </div>
+    <span class="element-label element-erde">Earth</span>
+    <h3>Virgo Feminine</h3>
+    <p>24th August to 23rd September</p>
+    <p class="product-size">L × W × H: 16 × 9 × 24 cm</p>
+  </article>
+
+  <!-- Waage -->
+  <article class="collection-card" data-sign="Waage" data-element="Luft" data-polarity="männlich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Waage_maennlich Kopie.png" alt="Waage männlich" />
+      </button>
+    </div>
+    <span class="element-label element-luft">Air</span>
+    <h3>Libra Masculine</h3>
+    <p>24th September to 23rd October</p>
+    <p class="product-size">L × W × H: 17 × 9 × 25 cm</p>
+  </article>
+
+  <article class="collection-card" data-sign="Waage" data-element="Luft" data-polarity="weiblich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Waage_weiblich Kopie.png" alt="Waage weiblich" />
+      </button>
+    </div>
+    <span class="element-label element-luft">Air</span>
+    <h3>Libra Feminine</h3>
+    <p>24th September to 23rd October</p>
+    <p class="product-size">L × W × H: 18 × 10 × 25 cm</p>
+  </article>
+
+  <!-- Skorpion -->
+  <article class="collection-card" data-sign="Skorpion" data-element="Wasser" data-polarity="männlich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Skorpion_maennlich Kopie.png" alt="Skorpion männlich" />
+      </button>
+    </div>
+    <span class="element-label element-wasser">Water</span>
+    <h3>Scorpio Masculine</h3>
+    <p>24th October to 22nd November</p>
+    <p class="product-size">L × W × H: 16 × 9 × 25 cm</p>
+  </article>
+
+  <article class="collection-card" data-sign="Skorpion" data-element="Wasser" data-polarity="weiblich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Skorpion_weiblich Kopie.png" alt="Skorpion weiblich" />
+      </button>
+    </div>
+    <span class="element-label element-wasser">Water</span>
+    <h3>Scorpio Feminine</h3>
+    <p>24th October to 22nd November</p>
+    <p class="product-size">L × W × H: 17 × 10 × 25 cm</p>
+  </article>
+
+  <!-- Schütze -->
+  <article class="collection-card" data-sign="Schütze" data-element="Feuer" data-polarity="männlich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Schuetze_maennlich Kopie.png" alt="Schütze männlich" />
+      </button>
+    </div>
+    <span class="element-label element-feuer">Fire</span>
+    <h3>Sagittarius Masculine</h3>
+    <p>23rd November to 21st December</p>
+    <p class="product-size">L × W × H: 18 × 9 × 27 cm</p>
+  </article>
+
+  <article class="collection-card" data-sign="Schütze" data-element="Feuer" data-polarity="weiblich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Schuetze_weiblich Kopie.png" alt="Schütze weiblich" />
+      </button>
+    </div>
+    <span class="element-label element-feuer">Fire</span>
+    <h3>Sagittarius Feminine</h3>
+    <p>23rd November to 21st December</p>
+    <p class="product-size">L × W × H: 19 × 10 × 26 cm</p>
+  </article>
+
+  <!-- Steinbock -->
+  <article class="collection-card" data-sign="Steinbock" data-element="Erde" data-polarity="männlich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Steinbock_maennlich Kopie.png" alt="Steinbock männlich" />
+      </button>
+    </div>
+    <span class="element-label element-erde">Earth</span>
+    <h3>Capricorn Masculine</h3>
+    <p>22nd December to 20th January</p>
+    <p class="product-size">L × W × H: 17 × 9 × 26 cm</p>
+  </article>
+
+  <article class="collection-card" data-sign="Steinbock" data-element="Erde" data-polarity="weiblich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Steinbock_weiblich Kopie.png" alt="Steinbock weiblich" />
+      </button>
+    </div>
+    <span class="element-label element-erde">Earth</span>
+    <h3>Capricorn Feminine</h3>
+    <p>22nd December to 20th January</p>
+    <p class="product-size">L × W × H: 18 × 10 × 25 cm</p>
+  </article>
+
+  <!-- Wassermann -->
+  <article class="collection-card" data-sign="Wassermann" data-element="Luft" data-polarity="männlich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Wassermann_maennlich Kopie.png" alt="Wassermann männlich" />
+      </button>
+    </div>
+    <span class="element-label element-luft">Air</span>
+    <h3>Aquarius Masculine</h3>
+    <p>21st January to 19th February</p>
+    <p class="product-size">L × W × H: 16 × 9 × 25 cm</p>
+  </article>
+
+  <article class="collection-card" data-sign="Wassermann" data-element="Luft" data-polarity="weiblich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Wassermann_weiblich Kopie.png" alt="Wassermann weiblich" />
+      </button>
+    </div>
+    <span class="element-label element-luft">Air</span>
+    <h3>Aquarius Feminine</h3>
+    <p>21st January to 19th February</p>
+    <p class="product-size">L × W × H: 17 × 10 × 25 cm</p>
+  </article>
+
+  <!-- Fische -->
+  <article class="collection-card" data-sign="Fische" data-element="Wasser" data-polarity="männlich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Fische_maennlich Kopie.png" alt="Fische männlich" />
+      </button>
+    </div>
+    <span class="element-label element-wasser">Water</span>
+    <h3>Pisces Masculine</h3>
+    <p>20th February to 20th March</p>
+    <p class="product-size">L × W × H: 15 × 9 × 24 cm</p>
+  </article>
+
+  <article class="collection-card" data-sign="Fische" data-element="Wasser" data-polarity="weiblich">
+    <div class="collection-card-image">
+      <button class="lightbox-trigger" type="button">
+        <img src="../assets/images/products/Fische_weiblich Kopie.png" alt="Fische weiblich" />
+      </button>
+    </div>
+    <span class="element-label element-wasser">Water</span>
+    <h3>Pisces Feminine</h3>
+    <p>20th February to 20th March</p>
+    <p class="product-size">L × W × H: 16 × 10 × 24 cm</p>
+  </article>
+
+</div>
+      </section>
+
+      <section id="produkt" class="slider-section">
+        <div class="slider" id="slider">
+          <button class="slider-btn prev" type="button" aria-label="Vorheriges Produktbild">‹</button>
+
+          <div class="slides">
+            <img src="../assets/images/slider/Zodicas_Packaging_Slider_1.jpg" class="slide" alt="Christel Zodiacs Verpackung 1" />
+            <img src="../assets/images/slider/Zodicas_Packaging_Slider_2.jpg" class="slide" alt="Christel Zodiacs Verpackung 2" loading="lazy" />
+            <img src="../assets/images/slider/Zodicas_Packaging_Slider_3.jpg" class="slide" alt="Christel Zodiacs Verpackung 3" loading="lazy" />
+          </div>
+
+          <button class="slider-btn next" type="button" aria-label="Nächstes Produktbild">›</button>
+        </div>
+
+        <div class="slider-text">
+          <h2>Refinement</h2>
+          <p>The <strong>Christel series</strong> includes twelve artfully designed figures made of <strong>fine bisque porcelain</strong>, shaped by a keen eye for detail and a timeless, stylish aesthetic.</p>
+          <p>A design that translates the symbolism of the stars into tangible beauty. The figures make a <strong>special gift</strong>, a personal object with symbolic meaning or a <strong>stylish decorative piece</strong> with character.</p>
+        </div>
+      </section>
+
+      <section id="marott" class="slider-section">
+        <div class="wrapper">
+          <div class="gallery-grid">
+            <img src="../assets/images/marott/Christel_Marott.jpg" class="big" alt="Christel Marott" />
+            <img src="../assets/images/marott/Zodiacs.jpg" alt="Christel Zodiacs Figuren" />
+          </div>
+
+          <div class="gallery-content">
+            <h2>Christel Marott</h2>
+            <p>Each figure bears the signature style of Danish artist <strong>Christel Marott (1919–1992)</strong>, combining artistic refinement with the deeper meaning of the zodiac signs.</p>
+            <p><strong>Soft forms and a matte surface</strong> give the objects a calm, almost mystical presence.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontakt" class="slider-section contact-team">
+        <div class="container">
+          <div class="contact-team__grid">
+            <article class="contact-card">
+              <div class="contact-card__image">
+                <img src="../assets/images/portraits/Sabine_Sack_web.jpg" alt="Sabine Sack" />
+              </div>
+
+              <div class="contact-card__content">
+                <p class="contact-card__region">International</p>
+                <h3>Sabine Sack</h3>
+                <p class="contact-card__role">Head of Sales</p>
+
+                <div class="contact-card__actions">
+                  <a href="mailto:sabine.sack@goebel.de" class="btn btn--primary">Send an email</a>
+                  <a href="tel:+499563920" class="btn btn--ghost">Call</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="contact-card">
+              <div class="contact-card__image">
+                <img src="../assets/images/portraits/Daniel_Ackermann_web.jpg" alt="Daniel Ackermann" />
+              </div>
+
+              <div class="contact-card__content">
+                <p class="contact-card__region">Germany</p>
+                <h3>Daniel Ackermann</h3>
+                <p class="contact-card__role">Head of Sales</p>
+
+                <div class="contact-card__actions">
+                  <a href="mailto:daniel.ackermann@goebel.de" class="btn btn--primary">Send an email</a>
+                  <a href="tel:+499563920" class="btn btn--ghost">Call</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+<p class="footer-social-title">Follow us</p>
+
+    <div class="footer-social">
+  <a href="https://www.instagram.com/goebelporzellan/" target="_blank" aria-label="Instagram">
+    <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-1.5a1.5 1.5 0 1 0 .001 3.001A1.5 1.5 0 0 0 18.5 5.5zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
+  </a>
+
+  <a href="https://www.facebook.com/GoebelPorzellan/" target="_blank" aria-label="Facebook">
+    <svg viewBox="0 0 24 24"><path d="M13 22v-9h3l1-4h-4V7c0-1.2.3-2 2-2h2V1.5c-.4-.05-1.7-.15-3.2-.15-3.2 0-5.3 2-5.3 5.6V9H6v4h2.5v9h4.5z"/></svg>
+  </a>
+
+  <a href="https://de.pinterest.com/GoebelPorzellan/" target="_blank" aria-label="Pinterest">
+    <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.2 2 11.5c0 3.8 2.2 7.1 5.4 8.5-.1-.7-.2-1.8 0-2.6l1.1-4.6s-.3-.6-.3-1.5c0-1.4.8-2.4 1.9-2.4.9 0 1.3.7 1.3 1.5 0 .9-.6 2.3-.9 3.6-.3 1.1.6 2 1.7 2 2.1 0 3.5-2.7 3.5-5.8 0-2.4-1.6-4.3-4.6-4.3-3.4 0-5.6 2.5-5.6 5.2 0 .9.3 1.6.8 2.1.2.2.2.3.2.5-.1.5-.2 1.5-.3 1.7 0 .3-.2.4-.5.3-1.5-.6-2.2-2.4-2.2-4.4 0-3.3 2.7-7.2 8.3-7.2 4.5 0 7.5 3.2 7.5 6.6 0 4.5-2.5 7.8-6.2 7.8-1.2 0-2.3-.6-2.7-1.3l-.7 2.6c-.3 1.1-.9 2.4-1.4 3.2.9.3 1.9.5 2.9.5 5.5 0 10-4.2 10-9.5S17.5 2 12 2z"/></svg>
+  </a>
+
+  <a href="https://www.linkedin.com/company/goebel-porzellan-gmbh" target="_blank" aria-label="LinkedIn">
+    <svg viewBox="0 0 24 24"><path d="M6 9h3v12H6zM7.5 3A1.75 1.75 0 1 1 7.5 6.5 1.75 1.75 0 0 1 7.5 3zM11 9h2.8v1.7h.04c.39-.74 1.34-1.52 2.76-1.52 2.95 0 3.5 1.94 3.5 4.46V21h-3v-5.3c0-1.26-.02-2.88-1.75-2.88-1.75 0-2.02 1.37-2.02 2.79V21h-3z"/></svg>
+  </a>
+
+  <a href="https://www.youtube.com/channel/UCA_ayifyb35CzDIkFV8eghw" target="_blank" aria-label="YouTube">
+    <svg viewBox="0 0 24 24"><path d="M23 7s-.2-1.7-.8-2.5c-.7-.9-1.5-.9-1.9-1C17.5 3 12 3 12 3h0s-5.5 0-8.3.5c-.4.1-1.2.1-1.9 1C1.2 5.3 1 7 1 7S1 8.7 1 10.3v1.4C1 13.3 1 15 1 15s.2 1.7.8 2.5c.7.9 1.6.9 2 .9 1.5.1 6.2.5 8.2.5 2 0 8.3-.5 8.3-.5s1.2-.1 1.9-1c.6-.8.8-2.5.8-2.5s0-1.7 0-3.3v-1.4C23 8.7 23 7 23 7zM9.8 14.6V8.8l5.5 2.9-5.5 2.9z"/></svg>
+  </a>
+</div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>© 2026 Goebel Porzellan GmbH</p>
+
+        <div class="footer-links">
+          <a href="imprint.html">Imprint</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <button id="scrollTopBtn" type="button" aria-label="Nach oben scrollen">↑</button>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" type="button" aria-label="Lightbox schließen">×</button>
+    <img class="lightbox__image" src="" alt="" />
+  </div>
+  <script src="../script.js"></script>
+</body>
+</html>
