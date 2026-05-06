@@ -156,16 +156,12 @@ section {
   width: auto;
   min-height: 36px;
   min-width: 90px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 .mobile-nav .lang a.active {
   background: #e8e8e8;
   color: #111;
+}
 
 /* MOBILE — muss ganz unten stehen */
 @media (max-width: 768px) {
