@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Impressum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <div class="page">
+    <header class="topbar">
+<a class="logo" href="../index.html" aria-label="Zur Startseite">
+  <img src="../assets/images/Spring_Copenhagen-logo.png" alt="Spring Copenhagen Logo" />
+</a>
+
+<nav class="nav" aria-label="Hauptnavigation">
+  <a href="#home">Home</a>
+  <a href="#kollektion">Collection</a>
+  <a href="#produkt">Product</a>
+  <a href="#marott">Christel Marott</a>
+  <a href="#kontakt">Contact</a>
+</nav>
+
+<!-- Desktop-Sprachen -->
+<div class="lang desktop-lang" aria-label="Sprachauswahl">
+  <a href="../index.html">DEU</a>
+  <a href="index-en.html" class="active" aria-current="page">ENG</a>
+  <a href="../fr/index-fr.html">FRA</a>
+</div>
+
+<button class="burger" id="burger" type="button" aria-label="Menü öffnen" aria-controls="mobileNav" aria-expanded="false">
+  ☰
+</button>
+</header>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+  <a href="#home">Home</a>
+  <a href="#kollektion">Collection</a>
+  <a href="#produkt">Product</a>
+  <a href="#marott">Christel Marott</a>
+  <a href="#kontakt">Contact</a>
+
+  <!-- Mobile-Sprachen -->
+  <div class="lang mobile-lang" aria-label="Sprachauswahl">
+  <a href="../index.html">DEU</a>
+  <a href="index-en.html" class="active" aria-current="page">ENG</a>
+  <a href="../fr/index-fr.html">FRA</a>
+</div>
+</nav>
+
+<div class="container legal">
+
+  <h1>Imprint</h1>
+
+  <p><em>This is a translation of the German imprint. In case of discrepancies, the German version shall prevail.</em></p>
+
+  <h2>Information according to § 5 TMG</h2>
+
+  <p>
+    Kaiser Porzellan GmbH<br>
+    Auwaldstr. 8<br>
+    96231 Bad Staffelstein<br>
+    Germany
+  </p>
+
+  <p>
+    Represented by:<br>
+    Hans-Peter Langsch
+  </p>
+
+  <p>
+    Goebel Porzellan GmbH<br>
+    Auwaldstr. 8<br>
+    96231 Bad Staffelstein<br>
+    Germany
+  </p>
+
+  <p>
+    Represented by:<br>
+    Uwe Dzyck and Daniela Vetter
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Phone: +49 (0) 95 63 / 92 0<br>
+    Fax: +49 (0) 95 63 / 92 594<br>
+    Email: goebel@goebel.de
+  </p>
+
+  <h2>Register Entry</h2>
+  <p>
+    Entry in the commercial register<br>
+    Register court: Local Court Coburg<br>
+    Registration number: HRB 4291
+  </p>
+
+  <h2>VAT</h2>
+  <p>
+    VAT identification number according to § 27 a German VAT Act:<br>
+    DE814825971
+  </p>
+
+  <h2>Electrical Equipment</h2>
+  <p>WEEE Reg. No.: DE71817340</p>
+  <p>EPR Reg. No.: FR207506_01QPFG</p>
+
+  <h2>Dispute Resolution</h2>
+  <p>
+    We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.
+  </p>
+
+  <h2>Liability for Content</h2>
+  <p>
+    As a service provider, we are responsible for our own content on these pages in accordance with general laws pursuant to § 7 para.1 TMG.
+    However, according to §§ 8 to 10 TMG, we are not obliged to monitor transmitted or stored third-party information.
+  </p>
+
+  <p>
+    Obligations to remove or block the use of information remain unaffected. Liability is only possible from the point in time at which a specific infringement becomes known.
+    Upon notification, such content will be removed immediately.
+  </p>
+
+  <h2>Liability for Links</h2>
+  <p>
+    Our website contains links to external third-party websites. We have no influence on the content of those websites and therefore cannot assume any liability.
+  </p>
+
+  <p>
+    The linked pages were checked at the time of linking. Permanent monitoring is not reasonable without concrete evidence of a violation.
+  </p>
+
+  <p>
+    Upon notification of violations, such links will be removed immediately.
+  </p>
+
+  <h2>Copyright</h2>
+  <p>
+    The content created by the website operators is subject to German copyright law.
+    Reproduction, editing and distribution require the consent of the respective author.
+  </p>
+
+  <p>
+    Downloads and copies of this site are only permitted for private, non-commercial use.
+  </p>
+
+  <p>
+    Third-party content is marked as such. Upon notification of legal violations, such content will be removed immediately.
+  </p>
+
+</div>
+  <a class="back" href="index.html">← Back to Home</a>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>© 2026 Goebel Porzellan GmbH</p>
+
+    <div class="footer-links">
+      <a href="imprint.html">Imprint</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const burger = document.getElementById("burger");
+  const mobileNav = document.getElementById("mobileNav");
+
+  if (burger && mobileNav) {
+    burger.addEventListener("click", () => {
+      mobileNav.classList.toggle("open");
+    });
+  }
+</script>
+
+</body>
+</html>
