@@ -43,6 +43,12 @@ section {
   box-shadow: none;
 }
 
+@media (max-width: 768px) {
+  .topbar {
+    padding: 20px 16px;
+  }
+}
+
 .logo img {
   max-width: 240px;
   height: auto;
