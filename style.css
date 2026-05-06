@@ -44,9 +44,36 @@ section {
 }
 
 @media (max-width: 768px) {
+
   .topbar {
-    padding: 20px 16px;
+    padding: 14px 10px;
+    min-height: 72px;
   }
+
+  .logo img {
+    max-width: 150px;
+    height: auto;
+  }
+
+  .burger {
+    font-size: 22px;
+    padding: 4px 6px;
+  }
+
+  .lang {
+    gap: 4px;
+    margin-left: 8px;
+  }
+
+  .lang a {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .mobile-nav {
+    top: 72px;
+  }
+
 }
 
 .logo img {
