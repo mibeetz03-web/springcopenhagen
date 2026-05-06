@@ -149,12 +149,16 @@ section {
 }
 
 .mobile-nav .lang a {
-  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
   font-size: 14px;
+  line-height: 1;
   border-radius: 999px;
   border: 1px solid #ddd;
   width: auto;
-  min-height: 36px;
+  height: 36px;
   min-width: 90px;
 }
 
