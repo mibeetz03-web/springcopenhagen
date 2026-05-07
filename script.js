@@ -73,136 +73,71 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-/* Product slider */
-const productSlides = document.querySelectorAll('.slide');
-const productSlidesContainer = document.querySelector('.slides');
-const productNext = document.querySelector('.slider-btn.next');
-const productPrev = document.querySelector('.slider-btn.prev');
-const productSlider = document.querySelector('.slider');
+  /* Product slider */
+  const productSlides = document.querySelectorAll('.slide');
+  const productSlidesContainer = document.querySelector('.slides');
+  const productNext = document.querySelector('.slider-btn.next');
+  const productPrev = document.querySelector('.slider-btn.prev');
+  const productSlider = document.querySelector('.slider');
 
-if (productSlides.length && productSlidesContainer && productNext && productPrev && productSlider) {
-  let currentProductSlide = 0;
-  let productAutoplay;
-  let productStartX = 0;
+  if (productSlides.length && productSlidesContainer && productNext && productPrev && productSlider) {
+    let currentProductSlide = 0;
+    let productAutoplay;
+    let productStartX = 0;
 
-  function showProductSlide(index) {
-    productSlidesContainer.style.transition = 'transform 0.8s ease';
-/* Product slider */
-const productSlides = document.querySelectorAll('.slide');
-const productSlidesContainer = document.querySelector('.slides');
-const productNext = document.querySelector('.slider-btn.next');
-const productPrev = document.querySelector('.slider-btn.prev');
-const productSlider = document.querySelector('.slider');
-
-if (
-  productSlides.length &&
-  productSlidesContainer &&
-  productNext &&
-  productPrev &&
-  productSlider
-) {
-  let currentProductSlide = 0;
-  let productAutoplay;
-  let productStartX = 0;
-
-  function showProductSlide(index) {
-    productSlidesContainer.style.transition = 'transform 0.8s ease';
-    productSlidesContainer.style.transform = `translateX(-${index * 100}%)`;
-  }
+    function showProductSlide(index) {
+      productSlidesContainer.style.transform = `translateX(-${index * 100}%)`;
+    }
 
   function goToNextProductSlide() {
+  currentProductSlide = (currentProductSlide + 1) % productSlides.length;
+  showProductSlide(currentProductSlide);
+}
 
-    if (currentProductSlide === productSlides.length - 1) {
+ function goToPrevProductSlide() {
+  currentProductSlide =
+    (currentProductSlide - 1 + productSlides.length) % productSlides.length;
 
-      productSlidesContainer.style.transition = 'opacity 0.3s ease';
-      productSlidesContainer.style.opacity = '0';
+  showProductSlide(currentProductSlide);
+}
 
-      setTimeout(() => {
-
-        currentProductSlide = 0;
-
-        productSlidesContainer.style.transition = 'none';
-        productSlidesContainer.style.transform = 'translateX(0%)';
-
-        requestAnimationFrame(() => {
-          productSlidesContainer.style.opacity = '1';
-          productSlidesContainer.style.transition = 'transform 0.8s ease';
-        });
-
-      }, 300);
-
-      return;
+    function startProductAutoplay() {
+      productAutoplay = setInterval(goToNextProductSlide, 5000);
     }
 
-    currentProductSlide += 1;
-    showProductSlide(currentProductSlide);
-  }
-
-  function goToPrevProductSlide() {
-
-    if (currentProductSlide === 0) {
-
-      productSlidesContainer.style.transition = 'opacity 0.3s ease';
-      productSlidesContainer.style.opacity = '0';
-
-      setTimeout(() => {
-
-        currentProductSlide = productSlides.length - 1;
-
-        productSlidesContainer.style.transition = 'none';
-        productSlidesContainer.style.transform =
-          `translateX(-${currentProductSlide * 100}%)`;
-
-        requestAnimationFrame(() => {
-          productSlidesContainer.style.opacity = '1';
-          productSlidesContainer.style.transition = 'transform 0.8s ease';
-        });
-
-      }, 300);
-
-      return;
+    function resetProductAutoplay() {
+      clearInterval(productAutoplay);
+      startProductAutoplay();
     }
 
-    currentProductSlide -= 1;
+    productNext.addEventListener('click', () => {
+      goToNextProductSlide();
+      resetProductAutoplay();
+    });
+
+    productPrev.addEventListener('click', () => {
+      goToPrevProductSlide();
+      resetProductAutoplay();
+    });
+
+    productSlider.addEventListener('touchstart', (e) => {
+      productStartX = e.touches[0].clientX;
+    });
+
+    productSlider.addEventListener('touchend', (e) => {
+      const endX = e.changedTouches[0].clientX;
+      const diff = productStartX - endX;
+
+      if (diff > 50) goToNextProductSlide();
+      if (diff < -50) goToPrevProductSlide();
+
+      if (Math.abs(diff) > 50) resetProductAutoplay();
+    });
+
     showProductSlide(currentProductSlide);
-  }
-
-  function startProductAutoplay() {
-    productAutoplay = setInterval(goToNextProductSlide, 5000);
-  }
-
-  function resetProductAutoplay() {
-    clearInterval(productAutoplay);
     startProductAutoplay();
   }
 
-  productNext.addEventListener('click', () => {
-    goToNextProductSlide();
-    resetProductAutoplay();
-  });
-
-  productPrev.addEventListener('click', () => {
-    goToPrevProductSlide();
-    resetProductAutoplay();
-  });
-
-  productSlider.addEventListener('touchstart', (e) => {
-    productStartX = e.touches[0].clientX;
-  });
-
-  productSlider.addEventListener('touchend', (e) => {
-    const endX = e.changedTouches[0].clientX;
-    const diff = productStartX - endX;
-
-    if (diff > 50) goToNextProductSlide();
-    if (diff < -50) goToPrevProductSlide();
-
-    if (Math.abs(diff) > 50) resetProductAutoplay();
-  });
-
-  showProductSlide(currentProductSlide);
-  startProductAutoplay();
-}
   /* Lightbox */
   const lightbox = document.getElementById('lightbox');
   const lightboxImage = document.querySelector('.lightbox__image');
