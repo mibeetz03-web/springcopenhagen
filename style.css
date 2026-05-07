@@ -555,21 +555,23 @@ section p {
 }
 
 .slider {
-  width: 100%;
-  overflow: hidden;
   position: relative;
-  margin-bottom: 0;
+  overflow: hidden;
 }
 
 .slides {
-  display: flex;
-  transition: transform 0.3s linear;
+  position: relative;
 }
 
 .slide {
-  min-width: 100%;
-  width: 100%;
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slide.is-active {
   display: block;
+  opacity: 1;
 }
 
 .slider-text {

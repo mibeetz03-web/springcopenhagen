@@ -74,76 +74,66 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* Product slider */
-  const productSlides = document.querySelectorAll('.slide');
-  const productSlidesContainer = document.querySelector('.slides');
-  const productNext = document.querySelector('.slider-btn.next');
-  const productPrev = document.querySelector('.slider-btn.prev');
-  const productSlider = document.querySelector('.slider');
+const productSlider = document.querySelector('.slider');
+const productSlides = document.querySelectorAll('.slider .slide');
+const productNext = document.querySelector('.slider-btn.next');
+const productPrev = document.querySelector('.slider-btn.prev');
 
-  if (productSlides.length && productSlidesContainer && productNext && productPrev && productSlider) {
-    let currentProductSlide = 0;
-    let productAutoplay;
-    let productDirection = 1;
-    let productStartX = 0;
+if (productSlider && productSlides.length) {
+  let currentProductSlide = 0;
+  let productAutoplay;
+  let productStartX = 0;
 
-    function showProductSlide(index) {
-      productSlidesContainer.style.transform = `translateX(-${index * 100}%)`;
-    }
+  function showProductSlide(index) {
+    productSlides[currentProductSlide].classList.remove('is-active');
+    currentProductSlide = (index + productSlides.length) % productSlides.length;
+    productSlides[currentProductSlide].classList.add('is-active');
+  }
 
-    function goToNextProductSlide() {
-      if (currentProductSlide === productSlides.length - 1) productDirection = -1;
-      if (currentProductSlide === 0) productDirection = 1;
-      currentProductSlide += productDirection;
-      showProductSlide(currentProductSlide);
-    }
+  function nextProductSlide() {
+    showProductSlide(currentProductSlide + 1);
+  }
 
-    function goToPrevProductSlide() {
-      currentProductSlide -= 1;
+  function prevProductSlide() {
+    showProductSlide(currentProductSlide - 1);
+  }
 
-      if (currentProductSlide < 0) {
-        currentProductSlide = productSlides.length - 1;
-        productDirection = -1;
-      }
+  function startProductAutoplay() {
+    productAutoplay = setInterval(nextProductSlide, 5000);
+  }
 
-      showProductSlide(currentProductSlide);
-    }
-
-    function startProductAutoplay() {
-      productAutoplay = setInterval(goToNextProductSlide, 5000);
-    }
-
-    function resetProductAutoplay() {
-      clearInterval(productAutoplay);
-      startProductAutoplay();
-    }
-
-    productNext.addEventListener('click', () => {
-      goToNextProductSlide();
-      resetProductAutoplay();
-    });
-
-    productPrev.addEventListener('click', () => {
-      goToPrevProductSlide();
-      resetProductAutoplay();
-    });
-
-    productSlider.addEventListener('touchstart', (e) => {
-      productStartX = e.touches[0].clientX;
-    });
-
-    productSlider.addEventListener('touchend', (e) => {
-      const endX = e.changedTouches[0].clientX;
-      const diff = productStartX - endX;
-
-      if (diff > 50) goToNextProductSlide();
-      if (diff < -50) goToPrevProductSlide();
-
-      if (Math.abs(diff) > 50) resetProductAutoplay();
-    });
-
-    showProductSlide(currentProductSlide);
+  function resetProductAutoplay() {
+    clearInterval(productAutoplay);
     startProductAutoplay();
   }
+
+  productNext?.addEventListener('click', () => {
+    nextProductSlide();
+    resetProductAutoplay();
+  });
+
+  productPrev?.addEventListener('click', () => {
+    prevProductSlide();
+    resetProductAutoplay();
+  });
+
+  productSlider.addEventListener('touchstart', (e) => {
+    productStartX = e.touches[0].clientX;
+  });
+
+  productSlider.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = productStartX - endX;
+
+    if (diff > 50) nextProductSlide();
+    if (diff < -50) prevProductSlide();
+
+    if (Math.abs(diff) > 50) resetProductAutoplay();
+  });
+
+  productSlides[0].classList.add('is-active');
+  startProductAutoplay();
+}
 
   /* Lightbox */
   const lightbox = document.getElementById('lightbox');
