@@ -83,23 +83,30 @@ document.addEventListener('DOMContentLoaded', () => {
   if (productSlides.length && productSlidesContainer && productNext && productPrev && productSlider) {
     let currentProductSlide = 0;
     let productAutoplay;
+    let productDirection = 1;
     let productStartX = 0;
 
     function showProductSlide(index) {
       productSlidesContainer.style.transform = `translateX(-${index * 100}%)`;
     }
 
-  function goToNextProductSlide() {
-  currentProductSlide = (currentProductSlide + 1) % productSlides.length;
-  showProductSlide(currentProductSlide);
-}
+    function goToNextProductSlide() {
+      if (currentProductSlide === productSlides.length - 1) productDirection = -1;
+      if (currentProductSlide === 0) productDirection = 1;
+      currentProductSlide += productDirection;
+      showProductSlide(currentProductSlide);
+    }
 
- function goToPrevProductSlide() {
-  currentProductSlide =
-    (currentProductSlide - 1 + productSlides.length) % productSlides.length;
+    function goToPrevProductSlide() {
+      currentProductSlide -= 1;
 
-  showProductSlide(currentProductSlide);
-}
+      if (currentProductSlide < 0) {
+        currentProductSlide = productSlides.length - 1;
+        productDirection = -1;
+      }
+
+      showProductSlide(currentProductSlide);
+    }
 
     function startProductAutoplay() {
       productAutoplay = setInterval(goToNextProductSlide, 5000);
