@@ -83,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (productSlides.length && productSlidesContainer && productNext && productPrev && productSlider) {
     let currentProductSlide = 0;
     let productAutoplay;
-    let productDirection = 1;
     let productStartX = 0;
 
     function showProductSlide(index) {
