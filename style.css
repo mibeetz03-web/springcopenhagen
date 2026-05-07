@@ -313,7 +313,7 @@ section p {
 
 .hero-btn:hover {
   background: #343434;
-  transform: translate(-50%, -50%) scale(1.01);
+  transform: translateX(-50%) scale(1.01);
 }
 
 .hero-overlay h1,
