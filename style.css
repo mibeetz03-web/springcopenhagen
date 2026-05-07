@@ -563,7 +563,7 @@ section p {
 
 .slides {
   display: flex;
-  transition: transform 0.8s ease;
+  transition: transform 0.3s linear;
 }
 
 .slide {
