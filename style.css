@@ -1307,17 +1307,23 @@ main > section.is-visible,
 }
 
 @media (max-width: 768px) {
+
+  .hero-slider {
+    height: 42vh;
+    min-height: 320px;
+    max-height: 420px;
+  }
+
   .hero-btn {
-    position: absolute;
-    top: 210px;
-    bottom: auto !important;
+    bottom: -60px;
     left: 50%;
-    transform: translateX(-50%) !important;
+    transform: translateX(-50%);
   }
 
   .hero-btn:hover,
   .hero-btn:active,
   .hero-btn:focus {
-    transform: translateX(-50%) !important;
+    transform: translateX(-50%);
   }
+
 }
