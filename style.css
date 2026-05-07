@@ -304,16 +304,15 @@ section p {
 }
 
 .hero-btn {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
+  position: static;
+  transform: none;
+  margin-top: 8px;
+  margin-bottom: 0;
 }
 
 .hero-btn:hover {
   background: #343434;
-  transform: translateX(-50%) scale(1.01);
+  transform: none;
 }
 
 .hero-overlay h1,
