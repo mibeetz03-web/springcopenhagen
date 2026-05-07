@@ -1339,12 +1339,15 @@ main > section.is-visible,
 @media (max-width: 768px) {
 
   .slider {
-    max-width: 100%;
+    height: auto;
+    aspect-ratio: unset;
   }
 
-.slide img {
-  height: 240px;
-  object-fit: contain;
-}
+  .slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
 
 }
