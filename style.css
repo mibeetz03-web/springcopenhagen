@@ -6,6 +6,11 @@
   font-style: normal;
   font-display: swap;
 }
+
+body {
+  font-family: 'Outfit', sans-serif;
+}
+
 * {
   box-sizing: border-box;
 }
