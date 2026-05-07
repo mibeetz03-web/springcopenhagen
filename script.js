@@ -73,70 +73,93 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* Product slider */
-  const productSlides = document.querySelectorAll('.slide');
-  const productSlidesContainer = document.querySelector('.slides');
-  const productNext = document.querySelector('.slider-btn.next');
-  const productPrev = document.querySelector('.slider-btn.prev');
-  const productSlider = document.querySelector('.slider');
+/* Product slider */
+const productSlides = document.querySelectorAll('.slide');
+const productSlidesContainer = document.querySelector('.slides');
+const productNext = document.querySelector('.slider-btn.next');
+const productPrev = document.querySelector('.slider-btn.prev');
+const productSlider = document.querySelector('.slider');
 
-  if (productSlides.length && productSlidesContainer && productNext && productPrev && productSlider) {
-    let currentProductSlide = 0;
-    let productAutoplay;
-    let productStartX = 0;
+if (productSlides.length && productSlidesContainer && productNext && productPrev && productSlider) {
+  let currentProductSlide = 0;
+  let productAutoplay;
+  let productStartX = 0;
 
-    function showProductSlide(index) {
-      productSlidesContainer.style.transform = `translateX(-${index * 100}%)`;
-    }
+  function showProductSlide(index) {
+    productSlidesContainer.style.transition = 'transform 0.8s ease';
+    productSlidesContainer.style.transform = `translateX(-${index * 100}%)`;
+  }
 
   function goToNextProductSlide() {
-  currentProductSlide = (currentProductSlide + 1) % productSlides.length;
-  showProductSlide(currentProductSlide);
-}
+    if (currentProductSlide === productSlides.length - 1) {
+      productSlidesContainer.style.transition = 'none';
+      currentProductSlide = 0;
+      productSlidesContainer.style.transform = 'translateX(0%)';
 
- function goToPrevProductSlide() {
-  currentProductSlide =
-    (currentProductSlide - 1 + productSlides.length) % productSlides.length;
+      requestAnimationFrame(() => {
+        productSlidesContainer.style.transition = 'transform 0.8s ease';
+      });
 
-  showProductSlide(currentProductSlide);
-}
-
-    function startProductAutoplay() {
-      productAutoplay = setInterval(goToNextProductSlide, 5000);
+      return;
     }
 
-    function resetProductAutoplay() {
-      clearInterval(productAutoplay);
-      startProductAutoplay();
-    }
-
-    productNext.addEventListener('click', () => {
-      goToNextProductSlide();
-      resetProductAutoplay();
-    });
-
-    productPrev.addEventListener('click', () => {
-      goToPrevProductSlide();
-      resetProductAutoplay();
-    });
-
-    productSlider.addEventListener('touchstart', (e) => {
-      productStartX = e.touches[0].clientX;
-    });
-
-    productSlider.addEventListener('touchend', (e) => {
-      const endX = e.changedTouches[0].clientX;
-      const diff = productStartX - endX;
-
-      if (diff > 50) goToNextProductSlide();
-      if (diff < -50) goToPrevProductSlide();
-
-      if (Math.abs(diff) > 50) resetProductAutoplay();
-    });
-
+    currentProductSlide += 1;
     showProductSlide(currentProductSlide);
+  }
+
+  function goToPrevProductSlide() {
+    if (currentProductSlide === 0) {
+      productSlidesContainer.style.transition = 'none';
+      currentProductSlide = productSlides.length - 1;
+      productSlidesContainer.style.transform = `translateX(-${currentProductSlide * 100}%)`;
+
+      requestAnimationFrame(() => {
+        productSlidesContainer.style.transition = 'transform 0.8s ease';
+      });
+
+      return;
+    }
+
+    currentProductSlide -= 1;
+    showProductSlide(currentProductSlide);
+  }
+
+  function startProductAutoplay() {
+    productAutoplay = setInterval(goToNextProductSlide, 5000);
+  }
+
+  function resetProductAutoplay() {
+    clearInterval(productAutoplay);
     startProductAutoplay();
   }
+
+  productNext.addEventListener('click', () => {
+    goToNextProductSlide();
+    resetProductAutoplay();
+  });
+
+  productPrev.addEventListener('click', () => {
+    goToPrevProductSlide();
+    resetProductAutoplay();
+  });
+
+  productSlider.addEventListener('touchstart', (e) => {
+    productStartX = e.touches[0].clientX;
+  });
+
+  productSlider.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = productStartX - endX;
+
+    if (diff > 50) goToNextProductSlide();
+    if (diff < -50) goToPrevProductSlide();
+
+    if (Math.abs(diff) > 50) resetProductAutoplay();
+  });
+
+  showProductSlide(currentProductSlide);
+  startProductAutoplay();
+}
 
   /* Lightbox */
   const lightbox = document.getElementById('lightbox');
