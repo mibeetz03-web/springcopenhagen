@@ -1357,8 +1357,39 @@ main > section.is-visible,
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: center;
+    object-position: center center;
     display: block;
   }
 
+}
+
+/* ========================================
+   FIX: Slider Bilder immer mittig croppen
+======================================== */
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  display: none;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+}
+
+.slide.is-active {
+  display: block;
 }
