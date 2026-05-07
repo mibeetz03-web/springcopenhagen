@@ -1143,11 +1143,10 @@ main > section.is-visible,
 }
 
 @media (max-width: 768px) {
-
   .hero-slider {
-    height: 34vh;
-    min-height: 220px;
-    max-height: 300px;
+    height: 46vh;
+    min-height: 360px;
+    max-height: 480px;
   }
 
   .hero-overlay {
@@ -1315,7 +1314,7 @@ main > section.is-visible,
   }
 
   .hero-btn {
-    bottom: -60px;
+    bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
   }
