@@ -90,23 +90,17 @@ document.addEventListener('DOMContentLoaded', () => {
       productSlidesContainer.style.transform = `translateX(-${index * 100}%)`;
     }
 
-    function goToNextProductSlide() {
-      if (currentProductSlide === productSlides.length - 1) productDirection = -1;
-      if (currentProductSlide === 0) productDirection = 1;
-      currentProductSlide += productDirection;
-      showProductSlide(currentProductSlide);
-    }
+  function goToNextProductSlide() {
+  currentProductSlide = (currentProductSlide + 1) % productSlides.length;
+  showProductSlide(currentProductSlide);
+}
 
-    function goToPrevProductSlide() {
-      currentProductSlide -= 1;
+ function goToPrevProductSlide() {
+  currentProductSlide =
+    (currentProductSlide - 1 + productSlides.length) % productSlides.length;
 
-      if (currentProductSlide < 0) {
-        currentProductSlide = productSlides.length - 1;
-        productDirection = -1;
-      }
-
-      showProductSlide(currentProductSlide);
-    }
+  showProductSlide(currentProductSlide);
+}
 
     function startProductAutoplay() {
       productAutoplay = setInterval(goToNextProductSlide, 5000);
