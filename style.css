@@ -1323,7 +1323,7 @@ main > section.is-visible,
   }
 
   .hero-btn {
-    bottom: -30px;
+    bottom: -60px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -1342,9 +1342,9 @@ main > section.is-visible,
     max-width: 100%;
   }
 
-  .slide img {
-    height: 240px;
-    object-fit: cover;
-  }
+.slide img {
+  height: 240px;
+  object-fit: contain;
+}
 
 }
